@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                <h4 class="mb-0">{{ spec_name }}</h4>
+                <a href="/" class="btn btn-sm btn-outline-secondary">Back to Specs</a>
+            </div>
+            <div class="card-body">
+                <pre style="white-space: pre-wrap; font-family: inherit;">{{ content }}</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header bg-light">
+                <h5 class="mb-0">Comments</h5>
+            </div>
+            <div class="card-body">
+                {% if comments %}
+                    {% for comment in comments %}
+                        <div class="mb-3 border-bottom pb-2">
+                            <strong>{{ comment.author }}</strong> <span class="text-muted small">{{ comment.timestamp[:16] }}</span>
+                            <p class="mb-0">{{ comment.text }}</p>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p class="text-muted small">No comments yet.</p>
+                {% endif %}
+
+                <hr>
+
+                <form action="/spec/{{ spec_name }}/comment" method="post">
+                    <div class="mb-2">
+                        <input type="text" name="author" class="form-control form-control-sm" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-2">
+                        <textarea name="text" class="form-control form-control-sm" rows="3" placeholder="Add a comment or interactive feedback..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm w-100">Post Comment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

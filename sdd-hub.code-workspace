@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "specs",
+            "name": "Specifications"
+        },
+        {
+            "path": "dashboard",
+            "name": "Dashboard"
+        }
+    ],
+    "settings": {}
+}
