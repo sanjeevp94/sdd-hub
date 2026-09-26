@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-10">
+        <div class="card">
+            <div class="card-header bg-white">
+                <h2 class="mb-0">Spec Kit Onboarding Tutorial</h2>
+            </div>
+            <div class="card-body">
+                <p class="lead">Welcome to the Multi-repo Spec-Driven Development Hub! This tutorial walks you through the 8-phase Spec Kit lifecycle. Open your agent (e.g., Claude Code) in the <code>specs/</code> directory and follow along.</p>
+
+                <hr>
+
+                <h4>Phase 1: Foundation</h4>
+                <div class="alert alert-secondary">
+                    <h5>1. Constitution</h5>
+                    <p>Run <code>/speckit.constitution</code> to establish project principles, architectural guidelines, and standard coding practices. This creates the rules your agent will follow.</p>
+                </div>
+
+                <div class="alert alert-secondary">
+                    <h5>2. Specify</h5>
+                    <p>Run <code>/speckit.specify [feature idea]</code> to write the feature specification. This describes the WHAT and WHY of the feature.</p>
+                </div>
+
+                <div class="alert alert-secondary">
+                    <h5>3. Clarify (Optional but Recommended)</h5>
+                    <p>Run <code>/speckit.clarify</code>. The agent will ask structured questions to resolve ambiguities in your spec before planning.</p>
+                </div>
+
+                <h4>Phase 2: Planning & Tasks</h4>
+                <div class="alert alert-info">
+                    <h5>4. Plan</h5>
+                    <p>Run <code>/speckit.plan</code> to create the technical implementation plan. This defines HOW the feature will be built technically.</p>
+                </div>
+
+                <div class="alert alert-info">
+                    <h5>5. Checklist</h5>
+                    <p>Run <code>/speckit.checklist</code> to generate a quality validation checklist to ensure requirements completeness.</p>
+                </div>
+
+                <div class="alert alert-info">
+                    <h5>6. Tasks</h5>
+                    <p>Run <code>/speckit.tasks</code> to break the plan down into a dependency-ordered task list.</p>
+                </div>
+
+                <h4>Phase 3: Execution</h4>
+                <div class="alert alert-success">
+                    <h5>7. Analyze</h5>
+                    <p>Run <code>/speckit.analyze</code> to perform a cross-artifact validation to ensure the spec, plan, and tasks are all perfectly aligned.</p>
+                </div>
+
+                <div class="alert alert-success">
+                    <h5>8. Implement</h5>
+                    <p>Run <code>/speckit.implement</code> to execute the tasks sequentially with test gates. This is where the code gets written!</p>
+                </div>
+
+                <hr>
+
+                <h4>Extensions Included</h4>
+                <p>This workspace also includes custom extensions. You can run commands like:</p>
+                <ul>
+                    <li><code>/speckit.retrospective.analyze</code> - For sprint retrospective analysis.</li>
+                    <li><code>/speckit.coding-standards-drift-control.report</code> - For checking coding standard drift.</li>
+                    <li><code>/speckit.wiki.init</code> & <code>/speckit.wiki.ingest</code> - For compounding project wiki management.</li>
+                    <li><code>/speckit.bdd.scenarios</code> - For generating BDD Gherkin files from specs.</li>
+                    <li><code>/speckit.ship.run</code> - Automates the release pipeline, changelog, and PR verification.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

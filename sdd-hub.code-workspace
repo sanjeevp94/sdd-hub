@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": ".",
+            "name": "Spec Driven Development Hub (Root)"
+        },
+        {
+            "path": "dashboard",
+            "name": "Dashboard"
+        }
+    ],
+    "settings": {}
+}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="mb-4">Specifications</h2>
+        {% if specs %}
+            <div class="list-group">
+            {% for spec in specs %}
+                <a href="{% if is_static %}{{ spec.url }}{% else %}/spec/{{ spec.name }}{% endif %}" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{ spec.name }}</h5>
+                    </div>
+                    <p class="mb-1 text-muted">{{ spec.content_preview }}</p>
+                </a>
+            {% endfor %}
+            </div>
+        {% else %}
+            <div class="alert alert-info">
+                No specifications found in the `specs/` directory. Run `/speckit.specify` to generate some!
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
