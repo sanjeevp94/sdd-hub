@@ -16,11 +16,11 @@
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">🚀 SDD Hub Workspace</a>
+            <a class="navbar-brand" href="{% if is_static %}index.html{% else %}/{% endif %}">🚀 SDD Hub Workspace</a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-link"><a class="nav-link" href="/">Specs</a></li>
-                    <li class="nav-link"><a class="nav-link" href="/tutorial">Tutorial</a></li>
+                    <li class="nav-link"><a class="nav-link" href="{% if is_static %}index.html{% else %}/{% endif %}">Specs</a></li>
+                    <li class="nav-link"><a class="nav-link" href="{% if is_static %}tutorial.html{% else %}/tutorial{% endif %}">Tutorial</a></li>
                 </ul>
             </div>
         </div>

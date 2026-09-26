@@ -11,7 +11,7 @@ app = FastAPI(title="Spec-Driven Development Hub")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
-SPECS_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "specs", "specs")
+SPECS_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "specs")
 COMMENTS_FILE = os.path.join(os.path.dirname(__file__), "data", "comments.json")
 
 # Ensure directories exist
@@ -57,7 +57,6 @@ async def read_spec(request: Request, spec_name: str):
     spec_comments = all_comments.get(spec_name, [])
 
     return templates.TemplateResponse(request=request, name="spec.html", context={
-
         "spec_name": spec_name,
         "content": content,
         "comments": spec_comments

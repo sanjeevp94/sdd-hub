@@ -1,8 +1,8 @@
 {
     "folders": [
         {
-            "path": "specs",
-            "name": "Specifications"
+            "path": ".",
+            "name": "Spec Driven Development Hub (Root)"
         },
         {
             "path": "dashboard",

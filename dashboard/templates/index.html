@@ -6,7 +6,7 @@
         {% if specs %}
             <div class="list-group">
             {% for spec in specs %}
-                <a href="/spec/{{ spec.name }}" class="list-group-item list-group-item-action">
+                <a href="{% if is_static %}{{ spec.url }}{% else %}/spec/{{ spec.name }}{% endif %}" class="list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">{{ spec.name }}</h5>
                     </div>

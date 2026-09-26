@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+dashboard/.venv/
+dashboard/__pycache__/
+dashboard/out/
+
+.specify/
+.claude/
+.gemini/

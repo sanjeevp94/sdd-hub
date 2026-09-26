@@ -5,7 +5,7 @@
         <div class="card">
             <div class="card-header bg-white d-flex justify-content-between align-items-center">
                 <h4 class="mb-0">{{ spec_name }}</h4>
-                <a href="/" class="btn btn-sm btn-outline-secondary">Back to Specs</a>
+                <a href="{% if is_static %}../index.html{% else %}/{% endif %}" class="btn btn-sm btn-outline-secondary">Back to Specs</a>
             </div>
             <div class="card-body">
                 <pre style="white-space: pre-wrap; font-family: inherit;">{{ content }}</pre>
